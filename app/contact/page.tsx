@@ -1,0 +1,142 @@
+"use client";
+
+import { FormEvent, useState } from "react";
+
+export default function ContactPage() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState<string | null>(null);
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus(null);
+    setIsSuccess(false);
+
+    const formElement = e.currentTarget;
+    const data = Object.fromEntries(new FormData(formElement));
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      const result = (await response.json()) as { message?: string };
+
+      if (!response.ok) {
+        throw new Error(result.message ?? "Failed to send message.");
+      }
+
+      setStatus("Message sent! We'll be in touch soon.");
+      setIsSuccess(true);
+      formElement.reset();
+    } catch (error) {
+      const msg = error instanceof Error ? error.message : "Failed to send message.";
+      setStatus(msg);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const inputClass =
+    "w-full rounded-xl border-2 border-[#0f0f2d] bg-white/70 px-4 py-3 text-sm text-[#0f0f2d] placeholder-[#0f0f2d]/40 outline-none transition focus:border-[#0f0f2d] focus:bg-white";
+
+  return (
+    <main className="min-h-screen bg-[#FFDE7C] font-vazirmatn">
+      <section className="mx-auto max-w-7xl px-6 py-16 sm:px-10 md:py-20">
+        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
+          {/* Left column */}
+          <div>
+            <h1 className="font-viga text-5xl font-black uppercase tracking-tight text-[#0f0f2d] sm:text-6xl md:text-7xl">
+              Contact Us
+            </h1>
+            <p className="mt-4 max-w-md text-sm leading-relaxed text-[#0f0f2d]/80 md:text-base">
+              Have a question or want to get involved? Send us a message and we'll get back to you.
+            </p>
+
+            <div className="mt-10 flex flex-col gap-4 text-sm text-[#0f0f2d]">
+              <div>
+                <p className="font-viga font-black uppercase tracking-widest text-xs text-[#0f0f2d]/60">
+                  Email
+                </p>
+                <a href="mailto:yep@brown.edu" className="mt-1 block font-semibold hover:underline">
+                  yep@brown.edu
+                </a>
+              </div>
+              <div>
+                <p className="font-viga font-black uppercase tracking-widest text-xs text-[#0f0f2d]/60">
+                  Phone
+                </p>
+                <p className="mt-1 font-semibold">(401) 863-1000</p>
+              </div>
+              <div>
+                <p className="font-viga font-black uppercase tracking-widest text-xs text-[#0f0f2d]/60">
+                  Address
+                </p>
+                <p className="mt-1 font-semibold">
+                  Nelson Center For Entrepreneurship
+                  <br />
+                  Euclid Avenue, Providence, RI
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right column — form */}
+          <div className="rounded-3xl border-2 border-[#0f0f2d] bg-white/40 p-8 sm:p-10">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <input
+                  name="first"
+                  placeholder="First name"
+                  required
+                  className={inputClass}
+                />
+                <input
+                  name="last"
+                  placeholder="Last name"
+                  required
+                  className={inputClass}
+                />
+              </div>
+              <input
+                name="email"
+                type="email"
+                placeholder="Email address"
+                required
+                className={inputClass}
+              />
+              <textarea
+                name="message"
+                placeholder="Your message"
+                required
+                rows={5}
+                className={`${inputClass} resize-none`}
+              />
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="font-viga mt-2 rounded-xl bg-[#0f0f2d] px-6 py-3 text-sm font-extrabold uppercase tracking-widest text-[#FFDE7C] transition hover:bg-[#1a2054] disabled:cursor-not-allowed disabled:opacity-60"
+              >
+                {isSubmitting ? "Sending..." : "Send Message"}
+              </button>
+
+              {status && (
+                <p
+                  className={`text-sm font-semibold ${
+                    isSuccess ? "text-green-700" : "text-red-600"
+                  }`}
+                >
+                  {status}
+                </p>
+              )}
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
