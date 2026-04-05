@@ -10,7 +10,7 @@ export default function Card({ artwork, onClick }: CardProps) {
   return (
     <button
       onClick={() => onClick(artwork)}
-      className="group relative w-full cursor-pointer overflow-hidden rounded-[18px] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0f0f2d]"
+      className="group relative w-full cursor-pointer overflow-hidden rounded-[18px] focus:outline-none focus-visible:ring-2 focus-visible:ring-yep-black"
       style={{ aspectRatio: "0.62" }}
       aria-label={artwork.title}
     >

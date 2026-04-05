@@ -60,7 +60,7 @@ export default function Masthead({
         </h1>
         <a
           href={ctaHref}
-          className="font-viga mt-6 inline-block rounded-full bg-[#FFDE7C] px-6 py-3 text-sm font-bold uppercase tracking-widest text-[#0f0f2d] transition hover:bg-[#f5d060]"
+          className="font-viga mt-6 inline-block rounded-full bg-yep-yellow px-6 py-3 text-sm font-bold uppercase tracking-widest text-yep-black transition hover:bg-yep-yellow-dark"
         >
           {ctaText}
         </a>

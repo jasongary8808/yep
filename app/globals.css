@@ -1,27 +1,84 @@
 @import "tailwindcss";
 
-:root {
-  --background: #FFDE7C;
-  --foreground: #0f0f2d;
-}
+@theme {
+  /* ── Brand colors (Figma) ─────────────────── */
+  --color-yep-yellow:        #FFDE7C;
+  --color-yep-yellow-dark:   #F0D777;
+  --color-yep-blue:          #121B4F;
+  --color-yep-blue-border:   #4E5676;
+  --color-yep-black:         #0F0F2D;
+  --color-white:             #FFFFFF;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-vazirmatn);
-  --font-mono: var(--font-geist-mono);
+  /* ── Fonts ───────────────────────────────── */
+  --font-sans:  var(--font-vazirmatn);
+  --font-viga:  var(--font-viga);
+  --font-mono:  var(--font-geist-mono);
+
+  /* ── Font sizes (Figma text styles) ─────── */
+  --text-header:        60px;
+  --text-larger-titles: 40px;
+  --text-titles:        32px;
+  --text-body:          18px;
+  --text-top-bar:       18px;
+  --text-nav-bar:       18px;
+  --text-button:        16px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background-color: var(--color-yep-yellow);
+  color: var(--color-yep-black);
   font-family: var(--font-vazirmatn), sans-serif;
+  font-size: 18px;
 }
 
+/* ── Font family helpers ─────────────────────── */
 .font-viga {
   font-family: var(--font-viga), sans-serif;
 }
 
 .font-vazirmatn {
   font-family: var(--font-vazirmatn), sans-serif;
+}
+
+/* ── Figma text-style utilities ──────────────── */
+.text-style-header {
+  font-family: var(--font-viga), sans-serif;
+  font-size: 60px;
+  line-height: 1;
+}
+
+.text-style-larger-titles {
+  font-family: var(--font-viga), sans-serif;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.text-style-titles {
+  font-family: var(--font-viga), sans-serif;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.text-style-body {
+  font-family: var(--font-vazirmatn), sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.text-style-top-bar {
+  font-family: var(--font-vazirmatn), sans-serif;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.text-style-nav-bar {
+  font-family: var(--font-vazirmatn), sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.text-style-button {
+  font-family: var(--font-vazirmatn), sans-serif;
+  font-size: 16px;
+  line-height: 1;
 }

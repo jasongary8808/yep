@@ -76,7 +76,7 @@ export default function Modal({ artwork, onClose }: ModalProps) {
           </p>
           <a
             href="#"
-            className="font-viga mt-2 inline-flex items-center gap-1.5 self-start rounded-full bg-[#FFDE7C] px-4 py-2 text-xs font-semibold text-[#0f0f2d] transition hover:bg-[#f5d060]"
+            className="font-viga mt-2 inline-flex items-center gap-1.5 self-start rounded-full bg-yep-yellow px-4 py-2 text-xs font-semibold text-yep-black transition hover:bg-yep-yellow-dark"
           >
             Apply Now ↗
           </a>

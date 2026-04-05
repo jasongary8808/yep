@@ -37,7 +37,7 @@ export default function TeamPage() {
   }, [selectedMember]);
 
   return (
-    <main className="min-h-screen bg-[#f0d777] px-6 py-10 text-[#0f0f2d] font-vazirmatn sm:px-10 md:px-14 md:py-12">
+    <main className="min-h-screen bg-yep-yellow px-6 py-10 text-yep-black font-vazirmatn sm:px-10 md:px-14 md:py-12">
       <div className="mx-auto max-w-7xl">
         <header>
           <h1 className="font-viga text-5xl font-black uppercase tracking-tight sm:text-6xl">
@@ -56,10 +56,10 @@ export default function TeamPage() {
                     );
                     setSelectedMemberId(null);
                   }}
-                  className={`font-viga rounded-xl border-2 border-[#4e5676] px-4 py-3 text-center text-lg font-black leading-none transition sm:text-xl ${
+                  className={`font-viga rounded-xl border-2 border-yep-blue-border px-4 py-3 text-center text-lg font-black leading-none transition sm:text-xl ${
                     isActive
-                      ? "bg-[#121b4f] text-[#f0d777]"
-                      : "bg-transparent text-[#0f0f2d] hover:bg-[#121b4f] hover:text-[#f0d777]"
+                      ? "bg-yep-blue text-yep-yellow"
+                      : "bg-transparent text-yep-black hover:bg-yep-blue hover:text-yep-yellow"
                   }`}
                 >
                   {section.title}
@@ -75,7 +75,7 @@ export default function TeamPage() {
               <h2 className="font-viga text-center text-5xl font-black uppercase tracking-[0.04em] sm:text-6xl">
                 {section.title}
               </h2>
-              <p className="mx-auto mt-4 max-w-5xl text-center text-sm font-semibold text-[#0f0f2d]/85 sm:text-base">
+              <p className="mx-auto mt-4 max-w-5xl text-center text-sm font-semibold text-yep-black/85 sm:text-base">
                 {section.intro}
               </p>
 
@@ -88,11 +88,11 @@ export default function TeamPage() {
                     <button
                       type="button"
                       onClick={() => setSelectedMemberId(member.id)}
-                      className="group relative w-full cursor-pointer rounded-[14px] text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#121b4f]"
+                      className="group relative w-full cursor-pointer rounded-[14px] text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-yep-blue"
                       aria-label={`Open details for ${member.name}`}
                     >
-                      <div className="aspect-[3/4] rounded-[14px] border-2 border-[#1a2054] bg-[#cdced5] transition-transform duration-500 group-hover:scale-[1.03]" />
-                      <div className="absolute -bottom-8 left-12 w-[86%] rounded-[14px] border-2 border-[#1a2054] bg-[#121b4f] px-3 py-3 text-center text-[#f0d777]">
+                      <div className="aspect-[3/4] rounded-[14px] border-2 border-yep-blue bg-[#cdced5] transition-transform duration-500 group-hover:scale-[1.03]" />
+                      <div className="absolute -bottom-8 left-12 w-[86%] rounded-[14px] border-2 border-yep-blue bg-yep-blue px-3 py-3 text-center text-yep-yellow">
                         <p className="font-viga text-[2.05rem] font-black leading-none">
                           {member.name}
                         </p>
@@ -108,7 +108,7 @@ export default function TeamPage() {
               <div className="mt-8 flex justify-center">
                 <a
                   href="/contact"
-                  className="font-viga mt-[30px] w-full max-w-sm rounded-xl border-2 border-[#4e5676] px-5 py-3 text-center text-sm font-black uppercase tracking-widest transition hover:bg-[#121b4f] hover:text-[#f0d777]"
+                  className="font-viga mt-[30px] w-full max-w-sm rounded-xl border-2 border-yep-blue-border px-5 py-3 text-center text-sm font-black uppercase tracking-widest transition hover:bg-yep-blue hover:text-yep-yellow"
                 >
                   Apply Here
                 </a>
@@ -128,32 +128,32 @@ export default function TeamPage() {
           onClick={() => setSelectedMemberId(null)}
         >
           <div
-            className="relative w-full max-w-5xl overflow-hidden rounded-2xl border-2 border-[#4e5676] bg-[#f4df84]"
+            className="relative w-full max-w-5xl overflow-hidden rounded-2xl border-2 border-yep-blue-border bg-yep-yellow"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               type="button"
               onClick={() => setSelectedMemberId(null)}
-              className="font-viga absolute right-3 top-3 z-10 rounded-md border border-[#4e5676] bg-[#f0d777] px-3 py-1 text-sm font-black text-[#0f0f2d] hover:bg-[#121b4f] hover:text-[#f0d777]"
+              className="font-viga absolute right-3 top-3 z-10 rounded-md border border-yep-blue-border bg-yep-yellow px-3 py-1 text-sm font-black text-yep-black hover:bg-yep-blue hover:text-yep-yellow"
             >
               Close
             </button>
 
             <div className="grid grid-cols-1 md:grid-cols-[45%_55%]">
-              <div className="aspect-[4/5] border-b-2 border-[#4e5676] bg-[#cdced5] md:aspect-auto md:min-h-[520px] md:border-b-0 md:border-r-2" />
+              <div className="aspect-[4/5] border-b-2 border-yep-blue-border bg-[#cdced5] md:aspect-auto md:min-h-[520px] md:border-b-0 md:border-r-2" />
 
               <div className="p-6 pt-14 sm:p-8 sm:pt-16 md:p-10 md:pt-12">
-                <p className="font-viga text-sm font-black tracking-widest text-[#121b4f]">
+                <p className="font-viga text-sm font-black tracking-widest text-yep-blue">
                   {selectedMember.role}
                 </p>
-                <h3 className="font-viga mt-2 text-4xl font-black leading-tight text-[#0f0f2d] sm:text-5xl">
+                <h3 className="font-viga mt-2 text-4xl font-black leading-tight text-yep-black sm:text-5xl">
                   {selectedMember.name}
                 </h3>
-                <p className="mt-5 text-base font-medium leading-relaxed text-[#0f0f2d] sm:text-lg">
+                <p className="mt-5 text-base font-medium leading-relaxed text-yep-black sm:text-lg">
                   {selectedMember.blurb}
                 </p>
                 <a
-                  className="mt-6 inline-block text-base font-semibold underline text-[#0f0f2d]"
+                  className="mt-6 inline-block text-base font-semibold underline text-yep-black"
                   href={`mailto:${selectedMember.email}`}
                 >
                   {selectedMember.email}

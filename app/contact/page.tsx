@@ -42,24 +42,24 @@ export default function ContactPage() {
   };
 
   const inputClass =
-    "w-full rounded-xl border-2 border-[#0f0f2d] bg-white/70 px-4 py-3 text-sm text-[#0f0f2d] placeholder-[#0f0f2d]/40 outline-none transition focus:border-[#0f0f2d] focus:bg-white";
+    "w-full rounded-xl border-2 border-yep-black bg-white/70 px-4 py-3 text-sm text-yep-black placeholder-yep-black/40 outline-none transition focus:border-yep-black focus:bg-white";
 
   return (
-    <main className="min-h-screen bg-[#FFDE7C] font-vazirmatn">
+    <main className="min-h-screen bg-yep-yellow font-vazirmatn">
       <section className="mx-auto max-w-7xl px-6 py-16 sm:px-10 md:py-20">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
           {/* Left column */}
           <div>
-            <h1 className="font-viga text-5xl font-black uppercase tracking-tight text-[#0f0f2d] sm:text-6xl md:text-7xl">
+            <h1 className="font-viga text-5xl font-black uppercase tracking-tight text-yep-black sm:text-6xl md:text-7xl">
               Contact Us
             </h1>
-            <p className="mt-4 max-w-md text-sm leading-relaxed text-[#0f0f2d]/80 md:text-base">
+            <p className="mt-4 max-w-md text-sm leading-relaxed text-yep-black/80 md:text-base">
               Have a question or want to get involved? Send us a message and we'll get back to you.
             </p>
 
-            <div className="mt-10 flex flex-col gap-4 text-sm text-[#0f0f2d]">
+            <div className="mt-10 flex flex-col gap-4 text-sm text-yep-black">
               <div>
-                <p className="font-viga font-black uppercase tracking-widest text-xs text-[#0f0f2d]/60">
+                <p className="font-viga font-black uppercase tracking-widest text-xs text-yep-black/60">
                   Email
                 </p>
                 <a href="mailto:yep@brown.edu" className="mt-1 block font-semibold hover:underline">
@@ -67,13 +67,13 @@ export default function ContactPage() {
                 </a>
               </div>
               <div>
-                <p className="font-viga font-black uppercase tracking-widest text-xs text-[#0f0f2d]/60">
+                <p className="font-viga font-black uppercase tracking-widest text-xs text-yep-black/60">
                   Phone
                 </p>
                 <p className="mt-1 font-semibold">(401) 863-1000</p>
               </div>
               <div>
-                <p className="font-viga font-black uppercase tracking-widest text-xs text-[#0f0f2d]/60">
+                <p className="font-viga font-black uppercase tracking-widest text-xs text-yep-black/60">
                   Address
                 </p>
                 <p className="mt-1 font-semibold">
@@ -86,7 +86,7 @@ export default function ContactPage() {
           </div>
 
           {/* Right column — form */}
-          <div className="rounded-3xl border-2 border-[#0f0f2d] bg-white/40 p-8 sm:p-10">
+          <div className="rounded-3xl border-2 border-yep-black bg-white/40 p-8 sm:p-10">
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <input
@@ -119,7 +119,7 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="font-viga mt-2 rounded-xl bg-[#0f0f2d] px-6 py-3 text-sm font-extrabold uppercase tracking-widest text-[#FFDE7C] transition hover:bg-[#1a2054] disabled:cursor-not-allowed disabled:opacity-60"
+                className="font-viga mt-2 rounded-xl bg-yep-black px-6 py-3 text-sm font-extrabold uppercase tracking-widest text-yep-yellow transition hover:bg-yep-blue disabled:cursor-not-allowed disabled:opacity-60"
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
               </button>

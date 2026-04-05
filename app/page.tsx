@@ -7,7 +7,7 @@ const heroImages = ["/heroImage1.png"];
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#FFDE7C] font-vazirmatn">
+    <main className="min-h-screen bg-yep-yellow font-vazirmatn">
       <Masthead
         images={heroImages}
         heading="YEP@Brown"
@@ -18,16 +18,16 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-6 py-14 sm:px-10 md:py-16">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
           <div>
-            <h1 className="font-viga text-4xl font-black uppercase tracking-tight text-[#0f0f2d] sm:text-5xl md:text-6xl">
+            <h1 className="font-viga text-4xl font-black uppercase tracking-tight text-yep-black sm:text-5xl md:text-6xl">
               Our Programs
             </h1>
-            <p className="mt-2 max-w-xl text-sm text-[#0f0f2d]/80 md:text-base">
+            <p className="mt-2 max-w-xl text-sm text-yep-black/80 md:text-base">
               Text about what programs are offered and for who go here.
             </p>
           </div>
           <a
             href="/contact"
-            className="font-viga w-fit rounded-xl border-2 border-[#0f0f2d] px-5 py-2 text-xs font-extrabold uppercase tracking-wide text-[#0f0f2d] transition hover:bg-[#0f0f2d] hover:text-[#FFDE7C]"
+            className="font-viga w-fit rounded-xl border-2 border-yep-black px-5 py-2 text-xs font-extrabold uppercase tracking-wide text-yep-black transition hover:bg-yep-black hover:text-yep-yellow"
           >
             Apply Here
           </a>

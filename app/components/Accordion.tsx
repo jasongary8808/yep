@@ -12,10 +12,10 @@ function AccordionItem({ title, content }: AccordionItemProps) {
   const contentRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="overflow-hidden rounded-2xl border-2 border-[#0f0f2d]">
+    <div className="overflow-hidden rounded-2xl border-2 border-yep-black">
       <button
         onClick={() => setIsOpen((o) => !o)}
-        className="font-viga flex w-full items-center justify-between bg-[#0f0f2d] px-6 py-5 text-left text-xl font-black uppercase tracking-wide text-[#FFDE7C] transition hover:bg-[#1a2054]"
+        className="font-viga flex w-full items-center justify-between bg-yep-black px-6 py-5 text-left text-xl font-black uppercase tracking-wide text-yep-yellow transition hover:bg-yep-blue"
         aria-expanded={isOpen}
       >
         <span>{title}</span>
@@ -32,7 +32,7 @@ function AccordionItem({ title, content }: AccordionItemProps) {
           maxHeight: isOpen ? `${contentRef.current?.scrollHeight ?? 500}px` : "0px",
         }}
       >
-        <div ref={contentRef} className="bg-[#0f0f2d]/5 px-6 py-5 text-sm leading-relaxed text-[#0f0f2d]">
+        <div ref={contentRef} className="bg-yep-black/5 px-6 py-5 text-sm leading-relaxed text-yep-black">
           {content}
         </div>
       </div>

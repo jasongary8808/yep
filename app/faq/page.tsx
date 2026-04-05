@@ -35,29 +35,29 @@ const faqItems = [
 
 export default function FAQPage() {
   return (
-    <main className="min-h-screen bg-[#FFDE7C] font-vazirmatn">
+    <main className="min-h-screen bg-yep-yellow font-vazirmatn">
       <section className="mx-auto max-w-4xl px-6 py-16 sm:px-10 md:py-20">
         <div className="mb-12">
-          <h1 className="font-viga text-5xl font-black uppercase tracking-tight text-[#0f0f2d] sm:text-6xl md:text-7xl">
+          <h1 className="font-viga text-5xl font-black uppercase tracking-tight text-yep-black sm:text-6xl md:text-7xl">
             FAQ
           </h1>
-          <p className="mt-3 max-w-xl text-sm text-[#0f0f2d]/80 md:text-base">
+          <p className="mt-3 max-w-xl text-sm text-yep-black/80 md:text-base">
             Answers to common questions about YEP!@Brown, our programs, and how to get involved.
           </p>
         </div>
 
         <Accordion items={faqItems} />
 
-        <div className="mt-12 rounded-3xl border-2 border-[#0f0f2d] bg-[#0f0f2d] p-8 text-center">
-          <h2 className="font-viga text-2xl font-black uppercase text-[#FFDE7C]">
+        <div className="mt-12 rounded-3xl border-2 border-yep-black bg-yep-black p-8 text-center">
+          <h2 className="font-viga text-2xl font-black uppercase text-yep-yellow">
             Still have questions?
           </h2>
-          <p className="mt-2 text-sm text-[#FFDE7C]/80">
+          <p className="mt-2 text-sm text-yep-yellow/80">
             Reach out to us directly and we'll get back to you.
           </p>
           <a
             href="/contact"
-            className="font-viga mt-6 inline-block rounded-full bg-[#FFDE7C] px-6 py-3 text-sm font-bold uppercase tracking-widest text-[#0f0f2d] transition hover:bg-[#f5d060]"
+            className="font-viga mt-6 inline-block rounded-full bg-yep-yellow px-6 py-3 text-sm font-bold uppercase tracking-widest text-yep-black transition hover:bg-yep-yellow-dark"
           >
             Contact Us
           </a>
