@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Artwork } from "../data/Programs";
 
 interface ModalProps {
@@ -29,20 +30,20 @@ export default function Modal({ artwork, onClose }: ModalProps) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-6"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/65 backdrop-blur-sm p-4 sm:p-6"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
       aria-label={artwork.title}
     >
       <div
-        className="relative grid w-full max-w-4xl overflow-hidden rounded-2xl bg-zinc-900 shadow-2xl sm:grid-cols-[280px_1fr]"
-        style={{ maxHeight: "80vh" }}
+        className="relative grid w-full max-w-4xl overflow-hidden rounded-2xl border-2 border-yep-yellow/15 bg-yep-black shadow-2xl sm:grid-cols-[300px_1fr]"
+        style={{ maxHeight: "85vh" }}
         onClick={(e) => e.stopPropagation()}
       >
         <button
           onClick={onClose}
-          className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-black/40 text-white transition hover:bg-black/70"
+          className="absolute right-3 top-3 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-black/60 text-white transition hover:bg-yep-yellow hover:text-yep-black"
           aria-label="Close"
         >
           ✕
@@ -53,33 +54,32 @@ export default function Modal({ artwork, onClose }: ModalProps) {
             src={artwork.imageUrl}
             alt={artwork.title}
             fill
-            sizes="280px"
+            sizes="300px"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 p-5">
-            <h3 className="font-viga text-xl font-black leading-tight text-white">
-              {artwork.title}
-            </h3>
-          </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
         </div>
 
-        <div className="flex flex-col justify-start gap-4 p-8">
-          <p className="font-viga text-xs font-semibold uppercase tracking-widest text-orange-500">
-            {artwork.years}
-          </p>
-          <h2 className="font-viga text-2xl font-black uppercase leading-tight tracking-tight text-white">
+        <div className="flex flex-col justify-start gap-5 p-7 sm:p-9">
+          {artwork.years && (
+            <p className="font-viga inline-flex w-fit items-center rounded-full bg-yep-yellow px-3 py-1 text-[0.7rem] font-black uppercase tracking-widest text-yep-black">
+              {artwork.years}
+            </p>
+          )}
+          <h2 className="font-viga text-3xl font-black uppercase leading-[0.95] tracking-tight text-white sm:text-4xl">
             {artwork.title}
           </h2>
-          <p className="text-sm leading-relaxed text-zinc-400">
+          <p className="text-sm leading-relaxed text-zinc-300 sm:text-base">
             {artwork.description}
           </p>
-          <a
-            href="#"
-            className="font-viga mt-2 inline-flex items-center gap-1.5 self-start rounded-full bg-yep-yellow px-4 py-2 text-xs font-semibold text-yep-black transition hover:bg-yep-yellow-dark"
+          <Link
+            href="/apply"
+            onClick={onClose}
+            className="font-viga mt-2 inline-flex items-center gap-2 self-start rounded-full bg-yep-yellow px-5 py-2.5 text-xs font-black uppercase tracking-widest text-yep-black transition hover:bg-yep-yellow-dark"
           >
-            Apply Now ↗
-          </a>
+            Apply Now
+            <span aria-hidden="true">↗</span>
+          </Link>
         </div>
       </div>
     </div>

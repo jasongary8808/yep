@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 interface AccordionItemProps {
   title: string;
@@ -9,7 +9,6 @@ interface AccordionItemProps {
 
 function AccordionItem({ title, content }: AccordionItemProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const contentRef = useRef<HTMLDivElement>(null);
 
   return (
     <div className="overflow-hidden rounded-2xl border-2 border-yep-black">
@@ -20,6 +19,7 @@ function AccordionItem({ title, content }: AccordionItemProps) {
       >
         <span>{title}</span>
         <span
+          aria-hidden="true"
           className={`ml-4 shrink-0 text-2xl transition-transform duration-300 ${isOpen ? "rotate-45" : ""}`}
         >
           +
@@ -27,13 +27,14 @@ function AccordionItem({ title, content }: AccordionItemProps) {
       </button>
 
       <div
-        className="overflow-hidden transition-[max-height] duration-300 ease-in-out"
-        style={{
-          maxHeight: isOpen ? `${contentRef.current?.scrollHeight ?? 500}px` : "0px",
-        }}
+        className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${
+          isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+        }`}
       >
-        <div ref={contentRef} className="bg-yep-black/5 px-6 py-5 text-sm leading-relaxed text-yep-black">
-          {content}
+        <div className="overflow-hidden">
+          <div className="bg-yep-black/5 px-6 py-5 text-sm leading-relaxed text-yep-black">
+            {content}
+          </div>
         </div>
       </div>
     </div>

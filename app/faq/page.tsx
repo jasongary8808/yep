@@ -38,11 +38,15 @@ export default function FAQPage() {
     <main className="min-h-screen bg-yep-yellow font-vazirmatn">
       <section className="mx-auto max-w-4xl px-6 py-16 sm:px-10 md:py-20">
         <div className="mb-12">
-          <h1 className="font-viga text-5xl font-black uppercase tracking-tight text-yep-black sm:text-6xl md:text-7xl">
+          <p className="font-viga text-xs font-black uppercase tracking-[0.3em] text-yep-black/60">
+            Got Questions?
+          </p>
+          <h1 className="font-viga mt-3 text-5xl font-black uppercase leading-[0.95] tracking-tight text-yep-black sm:text-6xl md:text-7xl">
             FAQ
           </h1>
-          <p className="mt-3 max-w-xl text-sm text-yep-black/80 md:text-base">
-            Answers to common questions about YEP!@Brown, our programs, and how to get involved.
+          <p className="mt-5 max-w-xl text-sm leading-relaxed text-yep-black/80 md:text-base">
+            Answers to common questions about YEP!@Brown, our programs, and
+            how to get involved.
           </p>
         </div>
 
@@ -53,7 +57,7 @@ export default function FAQPage() {
             Still have questions?
           </h2>
           <p className="mt-2 text-sm text-yep-yellow/80">
-            Reach out to us directly and we'll get back to you.
+            Reach out to us directly and we&rsquo;ll get back to you.
           </p>
           <a
             href="/contact"

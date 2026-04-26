@@ -50,11 +50,14 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
           {/* Left column */}
           <div>
-            <h1 className="font-viga text-5xl font-black uppercase tracking-tight text-yep-black sm:text-6xl md:text-7xl">
+            <p className="font-viga text-xs font-black uppercase tracking-[0.3em] text-yep-black/60">
+              Get In Touch
+            </p>
+            <h1 className="font-viga mt-3 text-5xl font-black uppercase leading-[0.95] tracking-tight text-yep-black sm:text-6xl md:text-7xl">
               Contact Us
             </h1>
-            <p className="mt-4 max-w-md text-sm leading-relaxed text-yep-black/80 md:text-base">
-              Have a question or want to get involved? Send us a message and we'll get back to you.
+            <p className="mt-5 max-w-md text-sm leading-relaxed text-yep-black/80 md:text-base">
+              Have a question or want to get involved? Send us a message and we&rsquo;ll get back to you.
             </p>
 
             <div className="mt-10 flex flex-col gap-4 text-sm text-yep-black">
