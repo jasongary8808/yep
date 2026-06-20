@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# YEP@Brown — Young Entrepreneurs Program Website
+
+A web platform built for the Young Entrepreneurs Program (YEP), a free entrepreneurship incubator for local high school students, led by Brown University students. The site introduces the program to prospective students, partner schools, and the broader community.
+
+> **Note:** This repository represents the local development build of the site. It has not yet been deployed to the live YEP@Brown domain.
+
+## Features
+
+- **Marketplace** — An online storefront highlighting and supporting student-run businesses
+- **Program Pages** — Dedicated pages for Home, About, Team, Programs, FAQ, and Apply
+- **Applications** — Support for student and program leadership applications
+- **Contact & Mailing List** — Contact forms and mailing list signup for community engagement
+- **Responsive UI** — Custom page layouts, color-coded sections, and interactive hover/motion effects across the site
+
+## Tech Stack
+
+- **Framework:** [Next.js](https://nextjs.org/) (App Router)
+- **Language:** TypeScript
+- **UI:** React, component-based architecture
+- **Styling:** Custom CSS (`globals.css`)
+
+## Project Structure
+
+```
+app/
+├── about/        # About page
+├── api/          # API routes
+├── apply/        # Application forms
+├── components/   # Shared, reusable UI components
+├── contact/      # Contact form
+├── data/         # Static data/content
+├── faq/          # FAQ page
+├── lib/          # Utility functions and helpers
+├── marketplace/  # Student marketplace
+├── team/         # Team directory pages
+├── layout.tsx    # Root layout
+├── page.tsx      # Home page
+└── globals.css   # Global styles
+public/           # Static assets (images, icons)
+```
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies and run the development server:
 
 ```bash
+npm install
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the site. Pages auto-update as you edit files in `app/`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically load and optimize [Geist](https://vercel.com/font), Vercel's font family.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## My Contributions
+
+- Built and styled core pages, including Home, About, Apply, and Contact
+- Designed page layouts and custom UI containers, including bubble-style content boxes
+- Collaborated with the design team to implement a color-coded visual system across pages
+- Implemented client-side navigation between pages and interactive hover effects (shadows, motion transitions) to improve UX
+
+## Team
+
+Built by a team of 4–6 Brown University students as part of the YEP@Brown program.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+To learn more about the underlying framework, check out the [Next.js Documentation](https://nextjs.org/docs).
