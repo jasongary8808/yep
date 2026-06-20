@@ -4,8 +4,7 @@ A web platform for YEP@Brown, a free entrepreneurship incubator for local high s
 
 > ⚠️ This repository represents the local development build of the site. It has not yet been deployed to the live YEP@Brown domain.
 
-![Homepage Screenshot](./screenshots/homepage.png)
-*Replace with a screenshot of the homepage*
+<img width="1246" height="632" alt="5356ACD1-365A-47E8-AFD1-27081D15EC7D_1_105_c" src="https://github.com/user-attachments/assets/14d18abc-c541-46f6-9d62-be99f1cb5743" />
 
 ## 🎯 What It Does
 
@@ -88,7 +87,4 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 ## 👥 Team
 
-Built by a team of 4–6 Brown University students as part of the YEP@Brown program.
-
-![Setup Screenshot](./screenshots/local-setup.png)
-*Replace with a screenshot of the local dev environment or a sample page*
+Built by a team of 4–6 Brown University students as part of the FullStack@Brown team.
